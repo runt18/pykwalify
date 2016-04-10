@@ -56,7 +56,7 @@ def test_validate_range():
     ]
 
     for max_, min_, max_ex, min_ex, value, errors in data_matrix:
-        print("Testing data: {} {} {} {} {}".format(max_, min_, max_ex, min_ex, value))
+        print("Testing data: {0} {1} {2} {3} {4}".format(max_, min_, max_ex, min_ex, value))
         c = ec()
         c._validate_range(max_, min_, max_ex, min_ex, value, '/', 'prefix')
         assert _remap_errors(c) == errors
